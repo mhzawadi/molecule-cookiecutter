@@ -7,7 +7,7 @@ lint:
   name: yamllint
 platforms:
   - name: instance-1
-    image: centos:7
+    image: arm32v7/debian
 provisioner:
   name: ansible
   lint:
