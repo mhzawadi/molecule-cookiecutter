@@ -1,7 +1,7 @@
 {
     "role_name": "role_name",
     "scenario_name": "default",
-    "author": "your name",
+    "author": "Matthew Horwood <mnatt@horwood.biz>",
     "description": "your description",
     "company": "your company (optional)",
     "license": ["BSD", "MIT", "GPLv2", "GPLv3", "Apache", "CC-BY"],
