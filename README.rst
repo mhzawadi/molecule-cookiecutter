@@ -47,3 +47,5 @@ Authors
 Molecule was created by `Retr0h <https://github.com/retr0h>`_ and is now maintained as part of the `Ansible`_ by Red Hat project.
 
 .. _`Ansible`: https://ansible.com
+
+And me!
