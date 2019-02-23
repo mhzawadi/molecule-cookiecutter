@@ -1,7 +1,7 @@
-Role Name
+{{ cookiecutter.role_name }}
 =========
 
-A brief description of the role goes here.
+{{ cookiecutter.description }}
 
 Requirements
 ------------
@@ -25,14 +25,16 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: {{ cookiecutter.role_name }}, x: 42 }
+         - role: {{ cookiecutter.role_name }}
+           vars:
+             x: 42
 
 License
 -------
 
-BSD
+{{ cookiecutter.license }}
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+{{ cookiecutter.author }}
