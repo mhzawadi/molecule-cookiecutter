@@ -3,18 +3,24 @@ dependency:
   name: gilt
 driver:
   name: docker
-lint:
-  name: yamllint
+lint: |
+  set -e
+  yamllint .
+  ansible-lint
 platforms:
   - name: instance-1
     image: arm32v7/debian
 provisioner:
   name: ansible
-  lint:
-    name: ansible-lint
+  lint: |
+  set -e
+  yamllint .
+  ansible-lint
 scenario:
   name: {{ cookiecutter.scenario_name }}
 verifier:
   name: testinfra
-  lint:
-    name: flake8
+  lint: |
+  set -e
+  yamllint .
+  ansible-lint
