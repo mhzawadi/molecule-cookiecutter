@@ -1,0 +1,14 @@
+pip
+ansible==2.9.19
+ansible-lint
+cookiecutter
+docker
+docker-compose
+docker-pycreds
+dockerpty
+molecule==3.3.4
+molecule-docker==0.2.4
+PyMySQL
+passlib
+diceware
+pexpect

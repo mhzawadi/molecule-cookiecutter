@@ -1,26 +1,13 @@
 ---
 dependency:
-  name: gilt
+  name: galaxy
 driver:
   name: docker
-lint: |
-  set -e
-  yamllint .
-  ansible-lint
 platforms:
-  - name: instance-1
+  - name: instance
     image: arm32v7/debian
+    pre_build_image: false
 provisioner:
   name: ansible
-  lint: |
-  set -e
-  yamllint .
-  ansible-lint
-scenario:
-  name: {{ cookiecutter.scenario_name }}
 verifier:
-  name: testinfra
-  lint: |
-  set -e
-  yamllint .
-  ansible-lint
+  name: ansible
