@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [ ! -d .venv ]
+then
+  echo -e "\x1b[0;31mYou need an environment setup...\x1b[0m"
+  python3 -m venv .venv
+  source .venv/bin/activate
+  python3 -m pip install --upgrade pip
+  python3 -m pip install -r requirements.txt
+  echo -e "\x1b[0;33mthere, its all done\x1b[0m"
+elif [ -z "$VIRTUAL_ENV" ]
+then
+  echo -e "\x1b[0;33mMissing that environment, starting it now...\x1b[0m"
+  source .venv/bin/activate
+  echo -e "\x1b[1;35mJust making sure you have the current version...\x1b[0m"
+  git pull
+fi
+
