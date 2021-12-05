@@ -5,9 +5,23 @@ driver:
   name: docker
 platforms:
   - name: instance
-    image: arm32v7/debian
+    image: debian:11
     pre_build_image: false
 provisioner:
   name: ansible
-verifier:
-  name: ansible
+  playbooks:
+    converge: ${MOLECULE_PLAYBOOK:-converge.yml}
+scenario:
+  test_sequence:
+    - lint
+    - destroy
+    - dependency
+    - syntax
+    - create
+    - prepare
+    - converge
+    - idempotence
+    - check
+    - side_effect
+    - verify
+    - destroy
