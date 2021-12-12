@@ -4,7 +4,7 @@ dependency:
 driver:
   name: docker
 platforms:
-  - name: instance
+  - name: {{cookiecutter.role_name}}
     image: debian:11
     pre_build_image: false
 provisioner:
