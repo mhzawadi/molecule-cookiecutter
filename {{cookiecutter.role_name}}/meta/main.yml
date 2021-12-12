@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: {{ cookiecutter.role_name | replace("-", "_") }}
   author: {{ cookiecutter.author }}
   description: {{ cookiecutter.description }}
   company: {{ cookiecutter.company }}
