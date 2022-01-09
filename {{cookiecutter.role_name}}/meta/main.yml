@@ -4,6 +4,8 @@ galaxy_info:
   author: {{ cookiecutter.author }}
   description: {{ cookiecutter.description }}
   company: {{ cookiecutter.company }}
+  role_name: {{ cookiecutter.role_name }}
+  namespace: {{ cookiecutter.company }}
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
