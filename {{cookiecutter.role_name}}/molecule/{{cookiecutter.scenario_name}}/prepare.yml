@@ -6,11 +6,6 @@
     - name: "Waiting for instance ssh connection."
       ansible.builtin.wait_for_connection:
 
-    - name: Wait for boot to finish
-      ansible.builtin.wait_for:
-        path: /var/lib/cloud/instance/boot-finished
-        state: present
-
     - when: molecule_yml.driver.options.sethostname | d('yes') | bool
       block:
         - name: "Set instance hostname."
