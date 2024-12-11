@@ -2,26 +2,17 @@
 dependency:
   name: galaxy
 driver:
-  name: docker
+  name: molecule-proxmox
+  options:
+    # Secrets file may be encrypted with ansible-vault.
+    proxmox_secrets: ${ANSIBLE_HOME}/proxmox.yml
+    node: pve01
+    template_name: template
+    timeout: 500
+    ssh_user: root
+    ssh_identity_file: ${SSH_IDENTITY_FILE}
 platforms:
   - name: {{cookiecutter.role_name}}
-    image: debian:11
-    pre_build_image: false
+    template_name: template
 provisioner:
   name: ansible
-  playbooks:
-    converge: ${MOLECULE_PLAYBOOK:-converge.yml}
-scenario:
-  test_sequence:
-    - lint
-    - destroy
-    - dependency
-    - syntax
-    - create
-    - prepare
-    - converge
-    - idempotence
-    - check
-    - side_effect
-    - verify
-    - destroy

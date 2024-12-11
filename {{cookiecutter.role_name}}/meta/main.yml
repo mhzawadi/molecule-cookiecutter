@@ -1,10 +1,10 @@
 ---
 galaxy_info:
-  role_name: {{ cookiecutter.role_name | replace("-", "_") }}
   author: {{ cookiecutter.author }}
   description: {{ cookiecutter.description }}
   company: {{ cookiecutter.company }}
-  namespace: {{ cookiecutter.company }}
+  role_name: {{ cookiecutter.role_name | replace("-", "_") }}
+  namespace: {{ cookiecutter.company | lower() }}
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value

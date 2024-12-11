@@ -4,6 +4,10 @@
     "author": "Matthew Horwood <matt@horwood.biz>",
     "description": "your description",
     "company": "your company (optional)",
-    "license": ["BSD", "MIT", "GPLv2", "GPLv3", "Apache", "CC-BY"],
-    "min_ansible_version": 4.5
+    "license": ["MIT"],
+    "min_ansible_version": "9.6.0",
+    "_copy_without_render": [
+      "*/create.yml",
+      "*/destroy.yml"
+    ]
 }
