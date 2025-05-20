@@ -8,6 +8,7 @@
     "min_ansible_version": "9.6.0",
     "_copy_without_render": [
       "*/create.yml",
-      "*/destroy.yml"
+      "*/destroy.yml",
+      "*/prepare.yml"
     ]
 }
